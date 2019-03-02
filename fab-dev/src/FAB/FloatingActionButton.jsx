@@ -3,30 +3,30 @@ import React from 'react'
 
 const Container = props => {
     return (
-        <nav className="fab-container"  >
-            <a href="#"
-                className="fab-item"
-                tooltip={"Ação 2"}><i className="far fa-sticky-note"></i></a>
-            <a href="#"
-                className="fab-item"
-                tooltip={"Ação 1"}><i className="fas fa-user-plus"></i></a>
-            <button
-                className="fab-item"
-                tooltip={"Ação 0"}><i className="fas fa-plus"></i></button>
+        <nav className="fab-container">
+            {props.children}
         </nav>
     )
 }
 
 const Button = props => {
     return (
-        <button>Botão</button>
+        <button onClick={props.onClick}
+            className={`fab-item ${props.className}`}
+            tooltip={props.tooltip} style={props.styles}>
+            <i className={props.icon} style={props.iconStyles}></i>
+        </button>
     )
 }
 
 const Link = props => {
     return (
-        <a href="#">link</a>
+        <a href={props.href}
+            className={`fab-item ${props.className}`}
+            tooltip={props.tooltip} style={props.styles}>
+            <i className={props.icon} style={props.iconStyles}></i>
+        </a>
     )
 }
 
-export {Container, Link, Button}
+export { Container, Link, Button }
