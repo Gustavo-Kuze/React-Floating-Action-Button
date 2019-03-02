@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Button, Container, Link} from './FAB/FloatingActionButton'
 
 class App extends Component {
   render() {
@@ -19,6 +20,9 @@ class App extends Component {
           >
             Learn React
           </a>
+          <Container />
+          <Button />
+          <Link />
         </header>
       </div>
     );
