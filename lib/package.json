@@ -1,6 +1,6 @@
 {
   "name": "react-floating-action-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple Android like FAB Component for React",
   "main": "build/index.js",
   "scripts": {
@@ -18,11 +18,11 @@
   "author": "Gustavo Kuze da Silva",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.3.4",
-    "react": "^16.8.3",
-    "webpack": "^4.29.6"
+    "react": "^16.8.3"
   },
   "devDependencies": {
+    "webpack": "^4.29.6",
+    "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.26.0",
