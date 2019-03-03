@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button, Container, Link, darkColors, lightColors } from './FAB/FloatingActionButton'
+import { Button, Container, Link, darkColors, lightColors } from 'react-floating-action-button'
 
 class App extends Component {
   render() {
