@@ -27,13 +27,17 @@
 .fab-item:hover {
   box-shadow: 0 0 4px rgba(0,0,0,.14),
     0 4px 8px rgba(0,0,0,.28);
+    
   outline: none;
+  transform: rotate(45deg);
 }
 
 .fab-item:not(:last-child) {
   width: 40px;
-  height: 40px;
-  margin: 20px auto 0;
+  /* height: 40px; */
+  /* margin: 20px auto 0; */
+  height: 0px;
+  margin: 0px auto 0;
   opacity: 0;
   -webkit-transform: translateY(50px);
       -ms-transform: translateY(50px);
@@ -47,6 +51,7 @@
       -ms-transform: none;
           transform: none;
   margin: 15px auto 0;
+  height: 40px;
 }
 
 .fab-item:nth-last-child(1) {
@@ -95,4 +100,13 @@
 [tooltip]:hover:after {
   visibility: visible;
   opacity: 1;
+  transition: opacity .1s ease-in-out;
+}
+
+.fab-item:nth-last-child(1)[tooltip]:hover:before,
+.fab-item:nth-last-child(1)[tooltip]:hover:after {
+  transition: opacity .1s step-end;
+  transform: rotate(-45deg);
+  bottom: -60%;
+  right: 60%;
 }
