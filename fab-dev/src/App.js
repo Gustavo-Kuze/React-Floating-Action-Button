@@ -27,7 +27,8 @@ class App extends Component {
               e.preventDefault()
               e.stopPropagation()
               alert('Baaaaah!')
-            }} />
+            }
+            }/>
           </Container>
         </header>
       </div>
