@@ -23,7 +23,7 @@ class App extends Component {
           <Container>
             <Link tooltip={"Ação 0"} icon="fas fa-plus" href="/baaah" styles={{backgroundColor: "#3f51b5", color: "#FAFAFA"}}/>
             <Link tooltip={"Ação 0"} icon="fas fa-plus" href="/baaah" />
-            <Button tooltip={"Ação 0"} icon="fas fa-plus" onClick={() => { alert('Baaaaah!') }}
+            <Button tooltip={"Ação 0"} icon="fas fa-plus" rotate={true}
             />
           </Container>
         </header>
