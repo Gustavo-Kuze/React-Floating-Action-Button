@@ -18,16 +18,21 @@
   "author": "Gustavo Kuze da Silva",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.3.4",
     "react": "^16.8.3",
     "webpack": "^4.29.6"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1",
     "webpack-cli": "^3.2.3"
   }
 }
