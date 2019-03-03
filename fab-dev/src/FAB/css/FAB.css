@@ -24,8 +24,8 @@
   height: 56px;
   margin: 20px auto 0;
   position: relative;
-  -webkit-transition: all .1s ease-out;
-          transition: all .1s ease-out;  
+  -webkit-transition: transform .1s ease-out, height 100ms ease, opacity 100ms ease;
+          transition: transform .1s ease-out, height 100ms ease, opacity 100ms ease;  
   text-decoration: none;
 }
 
@@ -33,7 +33,7 @@
 .fab-item:focus, 
 .fab-item:hover {
   box-shadow: 0 0 4px rgba(0,0,0,.14),
-    0 4px 8px rgba(0,0,0,.28);
+  0 4px 8px rgba(0,0,0,.28);
   outline: none;
 }
 
@@ -43,8 +43,8 @@
   margin: 0px auto 0;
   opacity: 0;
   -webkit-transform: translateY(50px);
-      -ms-transform: translateY(50px);
-          transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  transform: translateY(50px);
 }
 
 .fab-container:hover 
@@ -52,9 +52,20 @@
   height: 40px;
   opacity: 1;
   -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
+  -ms-transform: none;
+  transform: none;
   margin: 15px auto 0;
+}
+
+.fab-item:not(:last-child) i{
+  /* height: 0; */
+  opacity: 0;
+}
+
+.fab-container:hover 
+.fab-item:not(:last-child) i {
+  /* height: 56px; */
+  opacity: 1;
 }
 
 .fab-item:nth-last-child(1) {

@@ -21,14 +21,10 @@ class App extends Component {
             Learn React
           </a>
           <Container>
+            <Link tooltip={"Ação 0"} icon="fas fa-plus" href="/baaah" styles={{backgroundColor: "#3f51b5", color: "#FAFAFA"}}/>
             <Link tooltip={"Ação 0"} icon="fas fa-plus" href="/baaah" />
-            <Link tooltip={"Ação 0"} icon="fas fa-plus" href="/baaah" />
-            <Button tooltip={"Ação 0"} icon="fas fa-plus" onClick={(e) => {
-              e.preventDefault()
-              e.stopPropagation()
-              alert('Baaaaah!')
-            }
-            }/>
+            <Button tooltip={"Ação 0"} icon="fas fa-plus" onClick={() => { alert('Baaaaah!') }}
+            />
           </Container>
         </header>
       </div>

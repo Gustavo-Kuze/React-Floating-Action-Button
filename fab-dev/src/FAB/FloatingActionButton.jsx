@@ -3,7 +3,7 @@ import React from 'react'
 
 const Container = props => {
     return (
-        <nav className="fab-container">
+        <nav className={`fab-container ${props.className}`} style={props.styles}>
             {props.children}
         </nav>
     )
