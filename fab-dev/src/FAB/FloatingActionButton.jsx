@@ -1,5 +1,6 @@
 import './css/FAB.css'
 import React from 'react'
+import {darkColors, lightColors} from './js/MaterialColors'
 
 const Container = props => {
     return (
@@ -15,6 +16,7 @@ const Button = props => {
             className={`fab-item ${props.className} ${props.rotate ? 'fab-rotate' : ''}`}
             tooltip={props.tooltip} style={props.styles || defaultItemStyles}>
             <i className={props.icon} style={props.iconStyles}></i>
+            {props.children}
         </button>
     )
 }
@@ -25,15 +27,16 @@ const Link = props => {
             className={`fab-item ${props.className} ${props.rotate ? 'fab-rotate' : ''}`}
             tooltip={props.tooltip} style={props.styles || defaultItemStyles}>
             <i className={props.icon} style={props.iconStyles}></i>
+            {props.children}
         </a>
     )
 }
 
 const defaultItemStyles = {
-    backgroundColor: "#f44336",
-    color: "#FAFAFA",
+    backgroundColor: darkColors.lighterRed,
+    color: darkColors.white,
     textDecoration: "none",
     border: "none"
 }
 
-export { Container, Link, Button }
+export { Container, Link, Button, darkColors, lightColors }

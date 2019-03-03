@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button, Container, Link } from './FAB/FloatingActionButton'
+import { Button, Container, Link, darkColors, lightColors } from './FAB/FloatingActionButton'
 
 class App extends Component {
   render() {
@@ -21,10 +21,17 @@ class App extends Component {
             Learn React
           </a>
           <Container>
-            <Link tooltip={"Ação 0"} icon="fas fa-plus" href="/baaah" styles={{backgroundColor: "#3f51b5", color: "#FAFAFA"}}/>
-            <Link tooltip={"Ação 0"} icon="fas fa-plus" href="/baaah" />
-            <Button tooltip={"Ação 0"} icon="fas fa-plus" rotate={true}
-            />
+            <Link 
+            tooltip={"Ação 0"}
+            icon="fas fa-plus" href="/baaah" styles={{backgroundColor: darkColors.purple, color: lightColors.cyan}}/>
+            <Link
+            tooltip={"Ação 0"}
+            icon="fas fa-plus" href="/baaah" />
+            <Button
+            tooltip={"Ação 0"}
+            // icon="fas fa-plus"
+            rotate={true}
+            >Bah!</Button>
           </Container>
         </header>
       </div>

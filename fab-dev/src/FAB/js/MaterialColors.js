@@ -1,4 +1,4 @@
-const backgroundColors = {
+const lightColors = {
     red: "#ffcdd2",
     pink: "#f8bbd0",
     purple: "#e1bee7",
@@ -16,7 +16,8 @@ const backgroundColors = {
     white: "#f5f5f5"
 }
 
-const fontColors = {
+const darkColors = {
+    lighterRed: "#f44336",
     red: "#c62828",
     pink: "#ad1457",
     purple: "#6a1b9a",
@@ -33,4 +34,4 @@ const fontColors = {
     white: "#fafafa"
 }
 
-export {backgroundColors, fontColors}
+export {darkColors, lightColors}
