@@ -1,5 +1,9 @@
 # React-Floating-Action-Button
 A dead simple React component that works similar to Android's Action Button
+
+
+![FAB Demo GIF](https://github.com/Gustavo-Kuze/React-Floating-Action-Button/blob/master/img/FAB-Demo.gif "FAB Demo")
+
 ___
 
 ### Getting Started
