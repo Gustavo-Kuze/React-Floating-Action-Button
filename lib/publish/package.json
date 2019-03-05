@@ -1,6 +1,6 @@
 {
   "name": "react-floating-action-button",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A simple Android like FAB Component for React",
   "main": "build/index.js",
   "scripts": {
