@@ -23,18 +23,21 @@ import { Container, Button, Link } from 'react-floating-action-button'
 export default const YourAwesomeComponent = () => {
     return (
         <Container>
-            <Link href="#"
-                tooltip="Create note link"
-                icon="far fa-sticky-note" />
-            <Link href="#"
-                tooltip="Add user link"
-                icon="fas fa-user-plus" />
-                className="fab-item btn btn-link btn-lg text-white"
-            <Button
-                tooltip="The big plus button!"
-                icon="fas fa-plus"
-                rotate={true}
-                onClick={() => alert('FAB Rocks!')} />
+          <Link href="/"
+            tooltip="Create note link"
+            icon="far fa-sticky-note"
+          />
+          <Link href="/"
+            tooltip="Add user link"
+            className="fab-item btn btn-link btn-lg text-white"
+            icon="fas fa-user-plus"
+          />
+          <Button
+            tooltip="The big plus button!"
+            icon="fas fa-plus"
+            rotate
+            onClick={() => alert('FAB Rocks!')} 
+          />
         </Container>
     )
 }
@@ -63,7 +66,10 @@ import { Container, Button, lightColors, darkColors } from 'react-floating-actio
 <Container>
     <Button
      tooltip="The big plus button!"
-     styles={{backgroundColor: darkColors.lighterRed, color: lightColors.white}}
+     styles={{
+        backgroundColor: darkColors.lighterRed,
+        color: lightColors.white,
+      }}
      />
 </Container>
 
