@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css';
 
 import { Button, Container, Link, darkColors, lightColors } from 'react-floating-action-button'
 import 'react-floating-action-button/dist/index.css'
 
 const App = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
   return <div className="App">
     <header className="App-header">
       <h1>Welcome to React-FAB!</h1>
-      <Container>
+      <Container isOpen={isOpen}>
         <Link
           tooltip="Do something awesome!"
           icon="fas fa-plus" href="/baaah"
@@ -22,6 +25,7 @@ const App = () => {
           tooltip="FAB example"
           rotate={true}
           icon="fa fa-plus fa-2x"
+          onClick={() => setIsOpen(!isOpen)}
         ></Button>
       </Container>
     </header>
