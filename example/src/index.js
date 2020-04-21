@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free/css/all.css';
 import './index.css'
 
 import React from 'react'
