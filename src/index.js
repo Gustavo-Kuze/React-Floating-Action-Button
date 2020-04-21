@@ -1,46 +1,68 @@
-import styles from './fab.css';
+import fabStyles from './fab.css';
 import React from 'react';
 import { darkColors, lightColors } from './materialColors';
 
-const Container = (props) => {
+const Container = ({ styles, className, children }) => {
   return (
     <nav
-      className={`${styles['fab-container']} ${props.className}`}
-      style={props.styles}
+      className={`${fabStyles['fab-container']} ${className}`}
+      style={styles}
     >
-      {props.children}
+      {children}
     </nav>
   );
 };
 
-const Button = (props) => {
+const Button = ({
+  styles,
+  className,
+  children,
+  onClick,
+  rotate,
+  tooltip,
+  iconStyles,
+  icon,
+}) => {
   return (
     <button
-      onClick={props.onClick}
-      className={`${styles['fab-item']} ${props.className} ${
-        props.rotate ? styles['fab-rotate'] : ''
+      onClick={onClick}
+      className={`${fabStyles['fab-item']} ${className} ${
+        rotate ? fabStyles['fab-rotate'] : ''
       }`}
-      tooltip={props.tooltip}
-      style={props.styles || defaultItemStyles}
+      tooltip={tooltip}
+      style={styles || defaultItemStyles}
     >
-      <i className={props.icon} style={props.iconStyles} />
-      {props.children}
+      <i className={icon} style={iconStyles} />
+      {children}
     </button>
   );
 };
 
-const Link = (props) => {
+const Link = ({
+  styles,
+  className,
+  children,
+  onClick,
+  rotate,
+  tooltip,
+  iconStyles,
+  href,
+  icon,
+  target,
+}) => {
   return (
     <a
-      href={props.href}
-      className={`${styles['fab-item']} ${props.className} ${
-        props.rotate ? styles['fab-rotate'] : ''
+      onClick={onClick}
+      href={href}
+      className={`${fabStyles['fab-item']} ${className} ${
+        rotate ? fabStyles['fab-rotate'] : ''
       }`}
-      tooltip={props.tooltip}
-      style={props.styles || defaultItemStyles}
+      tooltip={tooltip}
+      style={styles || defaultItemStyles}
+      target={target}
     >
-      <i className={props.icon} style={props.iconStyles} />
-      {props.children}
+      <i className={icon} style={iconStyles} />
+      {children}
     </a>
   );
 };
