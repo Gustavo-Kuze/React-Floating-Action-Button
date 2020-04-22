@@ -11,9 +11,11 @@ const App = () => {
   return <div className="App">
     <header className="App-header">
       <h1>Welcome to React-FAB!</h1>
-      <Container isOpen={isOpen}>
+      <Container isOpen={isOpen}
+        onMouseLeave={() => setIsOpen(false)}
+        onMouseEnter={() => setIsOpen(true)}>
         <Link
-          tooltip="Do something awesome!"
+          tooltip="Add note"
           icon="fas fa-plus" href="/baaah"
           styles={{ backgroundColor: darkColors.lightBlue, color: lightColors.white }} />
         <Link
@@ -22,11 +24,11 @@ const App = () => {
           styles={{ backgroundColor: darkColors.yellow, color: lightColors.white }}
         />
         <Button
-          tooltip="FAB example"
-          rotate={true}
+          tooltip="Close"
+          rotate
           icon="fa fa-plus fa-2x"
           onClick={() => setIsOpen(!isOpen)}
-        ></Button>
+        />
       </Container>
     </header>
   </div>
