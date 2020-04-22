@@ -11,9 +11,13 @@ const Button = ({
   tooltip,
   iconStyles,
   icon,
+  onMouseLeave,
+  onMouseEnter,
 }) => {
   return (
     <button
+      onMouseLeave={onMouseLeave}
+      onMouseEnter={onMouseEnter}
       onClick={onClick}
       className={`${fabStyles['fab-item']} ${className} ${
         rotate ? fabStyles['fab-rotate'] : ''

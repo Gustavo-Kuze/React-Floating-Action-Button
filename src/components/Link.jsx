@@ -13,9 +13,13 @@ const Link = ({
   href,
   icon,
   target,
+  onMouseLeave,
+  onMouseEnter,
 }) => {
   return (
     <a
+      onMouseLeave={onMouseLeave}
+      onMouseEnter={onMouseEnter}
       onClick={onClick}
       href={href}
       className={`${fabStyles['fab-item']} ${className} ${

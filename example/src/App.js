@@ -13,7 +13,7 @@ const App = () => {
       <h1>Welcome to React-FAB!</h1>
       <Container isOpen={isOpen}
         onMouseLeave={() => setIsOpen(false)}
-        onMouseEnter={() => setIsOpen(true)}>
+      >
         <Link
           tooltip="Add note"
           icon="fas fa-plus" href="/baaah"
@@ -28,6 +28,7 @@ const App = () => {
           rotate
           icon="fa fa-plus fa-2x"
           onClick={() => setIsOpen(!isOpen)}
+          onMouseEnter={() => setIsOpen(true)}
         />
       </Container>
     </header>
