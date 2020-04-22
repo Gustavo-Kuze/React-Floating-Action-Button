@@ -38,7 +38,7 @@
 
 .fab-item:not(:last-child) {
   width: 40px;
-  height: 0px;
+  height: 40px;
   margin: 0px auto 0;
   opacity: 0;
   -webkit-transform: translateY(50px);
@@ -48,7 +48,6 @@
 
 .fab-container-open 
 .fab-item:not(:last-child) {
-  height: 40px;
   opacity: 1;
   -webkit-transform: none;
   -ms-transform: none;
@@ -58,11 +57,13 @@
 
 .fab-item:not(:last-child) i{
   opacity: 0;
+  height: -150px;
 }
 
 .fab-container-open 
 .fab-item:not(:last-child) i {
   opacity: 1;
+  height: 24px;
 }
 
 .fab-container-open > .fab-item:nth-last-child(1) {
