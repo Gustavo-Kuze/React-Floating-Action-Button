@@ -1,0 +1,188 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500);
+
+:root {
+  --tooltip-backcolor: #424242;
+  --tooltip-forecolor: #FAFAFA;
+}
+
+.fab-container {
+  bottom: 10vh;
+  position: fixed;
+  margin: 1em;
+  right: 8vw;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.fab-item {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 50%;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  margin: 20px auto 0;
+  position: relative;
+  -webkit-transition: transform .1s ease-out, height 100ms ease, opacity 100ms ease;
+          transition: transform .1s ease-out, height 100ms ease, opacity 100ms ease;  
+  text-decoration: none;
+}
+
+.fab-item:active, 
+.fab-item:focus, 
+.fab-item:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  transition: box-shadow .2s ease;
+  outline: none;
+}
+
+.fab-item:not(:last-child) {
+  width: 0px;
+  height: 40px;
+  opacity: 0;
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+}
+
+.fab-container-open 
+.fab-item:not(:last-child) {
+  height: 40px;
+  width: 40px;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  margin-right: 20px;
+}
+
+.fab-container-closed 
+.fab-item:not(:last-child) > i, .fab-container-closed 
+.fab-item:not(:last-child) > i::before {
+  height: 0px;
+  width: 0px;
+  display: none;
+}
+
+.fab-item:not(:last-child) i{
+  opacity: 0;
+}
+
+.fab-container-open 
+.fab-item:not(:last-child) i {
+  opacity: 1;
+}
+
+.fab-container-open > .fab-item:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+          transition-delay: 25ms;
+  background-size: contain;
+}
+
+.fab-container-open > .fab-item:not(:last-child):nth-last-child(2) {
+  -webkit-transition-delay: 50ms;
+          transition-delay: 20ms;
+  background-size: contain;
+}
+
+.fab-container-open > .fab-item:not(:last-child):nth-last-child(3) {
+  -webkit-transition-delay: 75ms;
+          transition-delay: 40ms;
+  background-size: contain;
+}
+
+.fab-container-open > .fab-item:not(:last-child):nth-last-child(4) {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 60ms;
+  background-size: contain;
+}
+
+.fab-container > [tooltip]:before {
+  bottom: 50px;
+  font-family: arial;
+  font-weight: 600;
+  border-radius: 2px;
+  background: var(--tooltip-backcolor);
+  color: var(--tooltip-forecolor);
+  content: attr(tooltip);
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 5px 7px;
+  margin-right: 12px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.fab-container > .fab-item:not(:nth-last-child(1))[tooltip]:hover:before,
+.fab-container > .fab-item:not(:nth-last-child(1))[tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .1s ease-in-out;
+}
+
+.fab-container-open > .fab-item:nth-last-child(1)[tooltip]:hover:before,
+.fab-container-open > .fab-item:nth-last-child(1)[tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .1s ease-out;
+}
+
+/* rotate */
+
+.fab-container-open > .fab-item.fab-rotate
+{
+  transform: rotate(45deg);
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.19), 3px 3px 6px rgba(0,0,0,0.23);
+  transition: box-shadow .8s ease, transform .1s ease;
+  outline: none;
+}
+
+@keyframes animateOpacityOpen {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes animateOpacityClose {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.fab-container-open > .fab-item.fab-rotate:nth-last-child(1)[tooltip]:before {
+  animation-name: animateOpacityOpen;
+  animation-duration: 950ms;
+}
+
+.fab-container > .fab-item:nth-last-child(1)[tooltip]:before {
+  animation-name: animateOpacityClose;
+  animation-duration: 950ms;
+}
+
+.fab-container-open > .fab-item.fab-rotate:nth-last-child(1)[tooltip]:before,
+.fab-container-open > .fab-item.fab-rotate:nth-last-child(1)[tooltip]:after 
+{
+  transform: rotate(-45deg);
+  right: 30px;
+}
+
+/* rotate back */
+
+.fab-container-closed > .fab-item.fab-rotate
+{
+  transform: rotate(0deg);
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.19), 3px 3px 6px rgba(0,0,0,0.23);
+  transition: box-shadow .2s ease, transform .1s ease;
+  outline: none;
+}
+
+.fab-container-closed > .fab-item.fab-rotate:nth-last-child(1)[tooltip]:before,
+.fab-container-closed > .fab-item.fab-rotate:nth-last-child(1)[tooltip]:after 
+{
+  transform: rotate(0deg);
+  bottom: -60%;
+  right: 60%;
+}
