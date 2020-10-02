@@ -21,7 +21,7 @@ class App extends Component {
             Learn React
           </a>
           <Container>
-            <Link 
+            <Link
             tooltip={"Ação 0"}
             icon="fas fa-plus" href="/baaah" styles={{backgroundColor: darkColors.purple, color: lightColors.cyan}}/>
             <Link
@@ -32,6 +32,16 @@ class App extends Component {
             // icon="fas fa-plus"
             rotate={true}
             >Bah!</Button>
+          </Container>
+          <Container styles={{ right: '20vw' }} inline>
+            <Link
+              tooltip={"Ação 0"}
+              icon="fas fa-plus"
+              href="/baaah"
+              styles={{backgroundColor: darkColors.purple, color: lightColors.cyan}}
+            />
+            <Link tooltip={"Ação 0"} icon="fas fa-plus" href="/baaah"/>
+            <Button tooltip={"Ação 0"} tooltip="Inline container" rotate>Bah!</Button>
           </Container>
         </header>
       </div>
